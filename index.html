@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pay</title>
+	
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function(){
+    		$("#in").keyup(function(){
+    			var number = $(this).val();
+	    		$.post(
+	    			"calc.php",
+	    			{
+	    				number: number
+	    			},
+	    			function(data){
+	    				$("#out").html(data);
+	    			}
+	    		);
+	    	});
+    	});
+	</script>
+    <style>
+        #content{
+            margin: 150px auto;
+
+            width: 850px;
+            text-align: center;
+        }
+        #in{
+            margin: 0 auto;
+            width: 100px;
+        }
+        #input{
+            margin: 0 auto;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="input">
+	        <input  type="text" id="in" >
+        </div>
+	    <p id="out"></p>
+    </div>
+</body>
+</html>
