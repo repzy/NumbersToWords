@@ -6,9 +6,9 @@ class HundredMillion  {
         $this->number =  $number;
     }
 
-    public function calculateTenMillion($number) {
-        $strategy = new TenMillion();
-        return $strategy->show(substr($number, 1));
+    public function calculateMillion($number) {
+        $strategy = new Million();
+        return $strategy->show(substr($number, 2));
     }
 
     public function calculateHundred($number){
@@ -16,10 +16,8 @@ class HundredMillion  {
         return  $strategy->show(substr($number, 0, 3));
     }
 
-
-
     public function show($number) {
         return $this->calculateHundred($number)." "
-        .$this->calculateTenMillion($number);
+        .$this->calculateMillion($number);
     }
 }
