@@ -11,13 +11,7 @@ include 'TenMillion.php';
 include 'HundredMillion.php';
 
 class Calculator  {
-    
-    private  $number;
-    
-    public function __constuct($number) {
-        $this->number =  $number;
-    }
-    
+
     public function choose($number){
         
         $count = strlen($number);
